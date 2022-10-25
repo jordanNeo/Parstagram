@@ -27,10 +27,17 @@ class Post : ParseObject() {
     fun getImage(): ParseFile? {
         return getParseFile(KEY_IMAGE)
     }
+    fun getProfilePic(): ParseFile? {
+        return getParseFile(KEY_PROFILE_PICTURE)
+    }
+    fun setProfilePicture(parsefile: ParseFile) {
+        return put(KEY_PROFILE_PICTURE, parsefile)
+    }
 
     companion object{
         const val KEY_DESCRIPTION = "description"
         const val KEY_IMAGE = "image"
+        const val KEY_PROFILE_PICTURE = "profilepicture"
         const val KEY_USER = "user"
     }
 }

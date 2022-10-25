@@ -10,6 +10,7 @@ class ParstagramApplication : Application() {
         super.onCreate()
 
         ParseObject.registerSubclass(Post::class.java)
+        ParseObject.registerSubclass(User::class.java)
 
         Parse.initialize(
             Parse.Configuration.Builder(this)
